@@ -2,28 +2,54 @@
 <html lang="es">
 <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="utf-8" http-equiv="encoding">
+    <meta content="utf-8">
+    <title>Molejism twister</title>
 </head>
 <body>
     <script>
         limbs = ["mano derecha", "mano izquierda", "pie izquierdo", "pie derecho"];
         floor_places = ["fila 1", "fila 2", "fila 3", "fila 4"];
-        function clickButton1() {
+
+        funny_limbs = ["cabeza", "culo"].concat(limbs);
+        funny_places = ["el culo de otro", "la rodilla derecha de otro", "la rodilla izquierda de otro",
+            "el codo derecho de otro", "el codo izquierdo de otro"].concat(floor_places);
+
+        funnier_limbs = ["nariz", "frente"].concat(funny_limbs);
+        funnier_places = ["el muslo izquierdo de otro", "el muslo derecho de otro", "la teta izquierda de otro",
+            "la teta derecha de otro", "la barriga de otro"].concat(floor_places);
+
+        funniest_limbs = funnier_limbs;
+        funniest_places = ["la entrepierna de otro", "la ropa interior de otro"].concat(funnier_places);
+
+        function randomSample(list) {
+            return list[Math.floor(Math.random() * list.length)];
+        }
+
+        function randomCombination(what, where) {
             var paragraph = document.querySelector("p");
-            console.log(paragraph);
-            paragraph.innerText = "qwer";
+            // console.log(paragraph);
+            paragraph.innerText = randomSample(what) + " en " + randomSample(where);
+        }
+
+        function clickButton1() {
+            randomCombination(limbs, floor_places);
         }
         function clickButton2() {
-            var paragraph = document.querySelector("p");
-            console.log(paragraph);
-            paragraph.innerText = "zxcv";
+            randomCombination(funny_limbs, funny_places);
         }
+        function clickButton3() {
+            randomCombination(funnier_limbs, funnier_places);
+        }
+        function clickButton4() {
+            randomCombination(funniest_limbs, funniest_places);
+        }
+
     </script>
     <button type="button" onclick="clickButton1()">Nivel 1</button>
     <button type="button" onclick="clickButton2()">Nivel 2</button>
-    <button type="button" onclick="clickButton1()">Nivel 3</button>
-    <button type="button" onclick="clickButton1()">Nivel 4</button>
-    <p>asdf</p>
+    <button type="button" onclick="clickButton3()">Nivel 3</button>
+    <button type="button" onclick="clickButton4()">Nivel 4</button>
+    <p></p>
 </body>
 
 </html>
