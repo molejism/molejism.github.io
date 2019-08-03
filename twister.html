@@ -19,31 +19,51 @@
             "la teta derecha de otro", "la barriga de otro"].concat(floor_places);
 
         funniest_limbs = funnier_limbs;
-        funniest_places = ["la entrepierna de otro", "la ropa interior de otro"].concat(funnier_places);
+        funniest_places = ["la entrepierna de otro"].concat(funnier_places);
+
+        whole_sentences = ["quítale una prenda de ropa a quien lleve más ropa encima (incluido tú)",
+            "haz moc moc en el culo de otro", "haz moc moc en las tetas de otro",
+            "haz la lancha a motor en las tetas de otro",
+            "haz twerking, sin cambiar la postura en la que estés",
+            "mano derecha encima de la ropa interior de otro", "mano izquierda encima de la ropa interior de otro",
+            "mano por debajo de la ropa interior de otro"];
+
+        let combinationsCount = funniest_limbs.length * funniest_places.length;
+        let sentencesCount = whole_sentences.length;
+        let sentencesRatio = sentencesCount / (combinationsCount + sentencesCount);
+
+        console.log("combinations: " + combinationsCount);
+        console.log("whole sentences: " + sentencesCount);
+        console.log("sentences ratio: " + sentencesRatio);
 
         function randomSample(list) {
             return list[Math.floor(Math.random() * list.length)];
         }
 
-        function randomCombination(what, where) {
+        function randomCombination(what, preposition, where) {
             var paragraph = document.querySelector("p");
             // console.log(paragraph);
-            paragraph.innerText = randomSample(what) + " en " + randomSample(where);
+            paragraph.innerText = randomSample(what) + preposition + randomSample(where);
         }
 
         function clickButton1() {
-            randomCombination(limbs, floor_places);
+            randomCombination(limbs, " en ", floor_places);
         }
         function clickButton2() {
-            randomCombination(funny_limbs, funny_places);
+            randomCombination(funny_limbs, " en ", funny_places);
         }
         function clickButton3() {
-            randomCombination(funnier_limbs, funnier_places);
+            randomCombination(funnier_limbs, " en ", funnier_places);
         }
         function clickButton4() {
-            randomCombination(funniest_limbs, funniest_places);
+            var randValue = Math.random();
+            // console.log(randValue);
+            if (randValue < sentencesRatio) {
+                randomCombination(whole_sentences, "", [""])
+            } else {
+                randomCombination(funniest_limbs, " en ", funniest_places);
+            }
         }
-
     </script>
     <button type="button" onclick="clickButton1()">Nivel 1</button>
     <button type="button" onclick="clickButton2()">Nivel 2</button>
