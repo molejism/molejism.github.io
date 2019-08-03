@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+</head>
+<body>
+    <script>
+        limbs = ["mano derecha", "mano izquierda", "pie izquierdo", "pie derecho"];
+        floor_places = ["fila 1", "fila 2", "fila 3", "fila 4"];
+        function clickButton1() {
+            var paragraph = document.querySelector("p");
+            console.log(paragraph);
+            paragraph.innerText = "qwer";
+        }
+        function clickButton2() {
+            var paragraph = document.querySelector("p");
+            console.log(paragraph);
+            paragraph.innerText = "zxcv";
+        }
+    </script>
+    <button type="button" onclick="clickButton1()">Nivel 1</button>
+    <button type="button" onclick="clickButton2()">Nivel 2</button>
+    <button type="button" onclick="clickButton1()">Nivel 3</button>
+    <button type="button" onclick="clickButton1()">Nivel 4</button>
+    <p>asdf</p>
+</body>
+
+</html>
