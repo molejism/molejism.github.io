@@ -130,3 +130,54 @@ sobriety.
 husband is the head of the wife, even as Christ is the head of the church: and
 he is the saviour of the body. 24 Therefore as the church is subject unto
 Christ, so let the wives be to their own husbands in every thing.
+
+## Leviticus 12:2-5
+
+Speak to the people of Israel, saying, If a woman conceives and bears a male
+child, then she shall be unclean seven days. As at the time of her menstruation,
+she shall be unclean. And on the eighth day the flesh of his foreskin shall be
+circumcised. Then she shall continue for thirty-three days in the blood of her
+purifying. She shall not touch anything holy, nor come into the sanctuary, until
+the days of her purifying are completed. But if she bears a female child, then
+she shall be unclean two weeks, as in her menstruation. And she shall continue
+in the blood of her purifying for sixty-six days.
+
+
+## Leviticus 15:19 and 15:28-30
+
+When a woman has a discharge, and it consists of blood from her body, she
+will be unclean because of her menstruation for seven days. Everyone who touches
+her will be unclean until evening.
+
+[...]
+
+When she is cured of her discharge, she is to count seven days, and after that
+she will be clean. 29 On the eighth day she must take two turtledoves or two
+young pigeons and bring them to the priest at the entrance to the tent of
+meeting. 30 The priest is to sacrifice one as a sin offering and the other as a
+burnt offering. In this way the priest will make atonement for her before the
+Lord because of her unclean discharge.
+
+# Sex
+
+## Leviticus 15:13-15
+
+[Discharge here means semen discharge, like while sleeping]
+
+When the man with the discharge has been cured of it, he is to count seven days
+for his cleansing, wash his clothes, and bathe his body in fresh water; he will
+be clean. He must take two turtledoves or two young pigeons on the eighth
+day, come before the Lord at the entrance to the tent of meeting, and give them
+to the priest. The priest is to sacrifice them, one as a sin offering and the
+other as a burnt offering. In this way the priest will make atonement for him
+before the Lord because of his discharge.
+
+# General law
+
+All leviticus could it here, but let's put some concrete ones:
+
+## Leviticus 19:27-28
+
+You are not to cut off the hair at the sides of your head or mar the edge of
+your beard. You are not to make gashes on your bodies for the dead or put
+tattoo marks on yourselves; I am the Lord.
