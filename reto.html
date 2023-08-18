@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8">
+    <title>Molejism reto o verdad</title>
+<style>
+div, p, button {
+  font-size: 25px;
+  text-align: center;
+}
+div, p {
+  padding: 2% 10%;
+}
+</style>
+</head>
+<body>
+    <script>
+        function randomSample(list) {
+            return list[Math.floor(Math.random() * list.length)];
+        }
+
+        let button_presses_count = 0;
+        let last_button_pressed = undefined;
+
+        function getChallenges(level) {
+            let challenges = [
+                {text: "Dar 3 picos a alguien."},
+                {text: "Besar en el cuello, 10 segundos."},
+                {text: "Abrazar a alguien por detrás y acariciarle, 30 segundos."},
+                {text: "Vendarle los ojos a alguien y besarle en 3 sitios."},
+                {text: "Conseguir un token 'inversión'. Cuando alguien te ordene algo, puedes perder el token para no obedecer y ordenárselo tú."},
+                {text: "Bailar con música sexy, 1 minuto. (sugerencias: usa una silla, <a href=https://www.youtube.com/watch?v=O_IYLqIjtMg>música</a>)", levels: [1]}, // https://www.youtube.com/watch?v=wbbYbZOQQxM
+                {text: "Interpretar la intro de una peli porno. (sugerencia, repartidor/a de pizza, fontanero/a, etc.)", levels: [1]},
+                {text: "Sentarte en la tripa de alguien hasta que otro reto te haga moverte.", levels: [1]},
+                {text: "Quitarte la camiseta o quitársela a alguien. Si nadie lleva camiseta, sube de nivel.",
+                levels: [1]},
+                {text: "Quitarte los pantalones o quitárselos a alguien. Si nadie lleva pantalones, sube de nivel",
+                levels: [2]},
+                {text: "Dar un masaje en los muslos, culo y espalda, 30 segundos.", levels: [1, 2]},
+                {text: "Vendarle los ojos a alguien y morderle en 3 sitios.", levels: [1, 2]},
+                {text: "Demostrar en algún objeto cercano tu técnica maestra de masturbación.", levels: [1, 2]},
+                {text: "Sentarte en la bragueta de alguien, o que alguien se siente en tu bragueta, hasta que otro reto te haga moverte.",
+                levels: [2]},
+                {text: "Darle un beso de spiderman a alguien, 15 segundos.", levels: [2, 3]},
+                {text: "Vendarle los ojos a alguien y lamerle en 3 sitios.", levels: [2, 3]},
+                {text: "Hacer un reto a tu elección que los demás acepten.", levels: [2, 3]},
+                {text: "Pasarle un caramelo a alguien, 3 veces.", levels: [2]},
+                {text: "Pasarle un hielo a alguien, 3 veces.", levels: [2]},
+                {text: "Besar con un hielo en la boca una parte del cuerpo de alguien, 15 segundos.", levels: [2]},
+                {text: "Quitarte ropa interior o quitársela a alguien.",
+                levels: [3]},
+                {text: "Sentarte en la cara de alguien, o que alguien se siente en tu cara, hasta que otro reto te haga moverte.",
+                levels: [3]},
+                {text: "Recibir sexo oral, 30 segundos.", levels: [3]},
+                {text: "Que alguien te masturbe, 30 segundos.", levels: [3]},
+                {text: "Dry hump, 20 segundos.", levels: [3]},
+                {text: "Darte una ducha fria. Ponte (solo) una camiseta y dúchate con agua fría" +
+                        " hasta que la camiseta esté completamente mojada." +
+                        " No puedes secarte a ti mismo/a, solo los demas pueden secarte.",
+                levels: [3]},
+
+                {text: "Describir algo que te gustaría hacer pero que nunca te has atrevido."},
+                {text: "Describir alguna fantasía o situactión que te ponga."},
+                {text: "Describir una situación (sexual) en la que hayas pasado mucha vergũenza.", levels: [1, 3]},
+                {text: "Describir algún juguete sexual que te gustaría comprar.", levels: [1]},
+                {text: "Nombrar algún personaje o actor o actriz que te ponga.", levels: [1]},
+                {text: "Describir algo que te ponga que te parezca raro o vergonzoso.", levels: [1, 2]},
+                {text: "Nombrar algún rasgo físico o de personalidad que te ponga.", levels: [1, 2]},
+                {text: "Describir qué tipo de porno sueles ver.", levels: [2]},
+                {text: "Describir algo que hayas visto o imaginado mientras te masturbas.", levels: [2, 3]},
+            ].flat().filter((e) => e.levels === undefined || e.levels.includes(level));
+
+            if (last_button_pressed === level) {
+                button_presses_count += 1;
+            } else {
+                last_button_pressed = level;
+                button_presses_count = 1;
+            }
+            if (button_presses_count > 10 && [1, 2].includes(level)) {
+                challenges.push({text: "Subir de nivel."});
+            }
+            return challenges;
+        }
+
+        function randomChallenge(level) {
+            let challenges = getChallenges(level);
+            document.getElementById("option1").innerHTML = randomSample(challenges).text;
+            document.getElementById("option2").innerHTML = randomSample(challenges).text;
+        }
+
+        function clickButton1() {
+            randomChallenge(1)
+        }
+        function clickButton2() {
+            randomChallenge(2)
+        }
+        function clickButton3() {
+            randomChallenge(3)
+        }
+
+        (function count() {
+            console.log(getChallenges(1).length)
+            console.log(getChallenges(2).length)
+            console.log(getChallenges(3).length)
+        })()
+    </script>
+    <div>
+        <button type="button" onclick="clickButton1()">Nivel 1</button>
+        <button type="button" onclick="clickButton2()">Nivel 2</button>
+        <button type="button" onclick="clickButton3()">Nivel 3</button>
+        <p>Elige entre:</p>
+        <p id="option1"></p>
+        <p id="option2"></p>
+    </div>
+</body>
+
+</html>
