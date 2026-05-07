@@ -63,6 +63,15 @@ still mangled. After some attempts, I don't know what I did differently (deleted
 reopened) and the plugin managed to get the proper text. Hooray! In the past, from this point I managed to send
 books to my kindle, so should be easy now.
 
+**Update:** turns out I was confused and you don't need to get the file from the kobo app folders.
+You just have to:
+- open calibre
+- install the obok plugin if you haven't already
+- open the kobo app in wine
+- calibre will prompt to remove the drm from the books in you kobo app library.
+
+The order is important, calibre has to be opened before the kobo app is opened.
+
 ### Transfer to kindle
 
 In the past I found that the kindle doesn't like some formats, and the one that seems to work best
